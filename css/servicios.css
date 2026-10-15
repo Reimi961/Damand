@@ -11,7 +11,7 @@
     --font-body: 'Poppins', sans-serif;
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -40,7 +41,7 @@ body {
 }
 
 .section {
-    padding: 90px 0;
+    padding: clamp(50px, 8vw, 90px) 0;
 }
 
 .section-dark {
@@ -49,7 +50,7 @@ body {
 
 .grid {
     display: grid;
-    gap: 30px;
+    gap: clamp(20px, 3vw, 30px);
 }
 
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
@@ -74,7 +75,7 @@ body {
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: 2.3rem;
+    font-size: clamp(1.8rem, 4vw, 2.3rem);
     color: var(--gold-light);
     line-height: 1.2;
 }
@@ -95,6 +96,7 @@ body {
     margin: 15px auto 25px auto;
 }
 
+/* NAVBAR RESPONSIVE */
 .navbar {
     position: fixed;
     top: 0;
@@ -116,7 +118,7 @@ body {
 }
 
 .brand-logo {
-    height: 45px;
+    height: clamp(35px, 5vw, 45px);
     width: auto;
     object-fit: contain;
 }
@@ -152,12 +154,15 @@ body {
     border: none;
     color: var(--gold-primary);
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
+/* PAGE HEADER */
 .page-header {
     position: relative;
-    padding: 160px 0 80px 0;
+    padding: clamp(120px, 15vw, 160px) 0 clamp(60px, 10vw, 80px) 0;
     border-bottom: 1px solid var(--border-gold);
+    text-align: center;
 }
 
 .header-bg {
@@ -198,28 +203,29 @@ body {
 
 .page-title {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 5vw, 3rem);
     color: var(--gold-light);
     line-height: 1.2;
     margin-bottom: 15px;
 }
 
 .page-subtitle {
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
     color: var(--text-muted);
     max-width: 800px;
     margin: 0 auto;
 }
 
-.service-card-detail {
+/* CARDS */
+.service-card-detail, .pricing-card {
     background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
-    padding: 35px 30px;
+    padding: clamp(25px, 4vw, 35px) clamp(20px, 3vw, 30px);
     transition: all 0.3s ease;
 }
 
-.service-card-detail:hover {
+.service-card-detail:hover, .pricing-card:hover {
     border-color: var(--gold-primary);
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -243,14 +249,14 @@ body {
     height: 28px;
 }
 
-.service-card-detail h3 {
+.service-card-detail h3, .card-header h3 {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
     color: #fff;
     margin-bottom: 12px;
 }
 
-.service-card-detail p {
+.service-card-detail p, .service-desc {
     color: var(--text-muted);
     font-size: 0.92rem;
     margin-bottom: 20px;
@@ -262,7 +268,7 @@ body {
     padding-top: 15px;
 }
 
-.card-bullets li {
+.card-bullets li, .pricing-features li {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -271,28 +277,18 @@ body {
     margin-bottom: 8px;
 }
 
-.card-bullets li i {
+.card-bullets li i, .pricing-features li i {
     width: 16px;
     height: 16px;
     color: var(--gold-primary);
+    flex-shrink: 0;
 }
 
 .pricing-card {
-    background: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 35px 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    transition: all 0.3s ease;
-}
-
-.pricing-card:hover {
-    border-color: var(--gold-primary);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .pricing-card.featured {
@@ -328,17 +324,8 @@ body {
     margin-bottom: 20px;
 }
 
-.card-header h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 8px;
-}
-
 .service-desc {
-    color: var(--text-muted);
-    font-size: 0.88rem;
-    min-height: 42px;
+    min-height: auto;
 }
 
 .card-price {
@@ -355,7 +342,7 @@ body {
 }
 
 .price-amount {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
     font-weight: 700;
     color: var(--gold-light);
     font-family: var(--font-heading);
@@ -371,22 +358,7 @@ body {
     margin-bottom: 30px;
 }
 
-.pricing-features li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.9rem;
-    color: #d4d4d8;
-    margin-bottom: 12px;
-}
-
-.pricing-features li i {
-    width: 18px;
-    height: 18px;
-    color: var(--gold-primary);
-    flex-shrink: 0;
-}
-
+/* ROI & TABLES */
 .roi-box {
     display: flex;
     align-items: flex-start;
@@ -406,6 +378,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .roi-box h4 {
@@ -423,7 +396,8 @@ body {
     background: var(--bg-card);
     border: 1px solid var(--border-gold);
     border-radius: 14px;
-    padding: 30px;
+    padding: clamp(20px, 3vw, 30px);
+    overflow-x: auto; /* Permite scroll horizontal en tablas en móviles */
 }
 
 .table-title {
@@ -441,6 +415,7 @@ body {
 .cost-table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 500px; /* Asegura estructura limpia al contraerse */
 }
 
 .cost-table th, .cost-table td {
@@ -466,6 +441,7 @@ body {
     font-size: 0.8rem;
 }
 
+/* FAQ ACCORDION */
 .faq-accordion {
     display: flex;
     flex-direction: column;
@@ -519,16 +495,17 @@ body {
     margin-bottom: 10px;
 }
 
+/* CTA BOX */
 .cta-box {
     background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(0, 0, 0, 0.4));
     border: 1px solid var(--border-gold);
     border-radius: 16px;
-    padding: 40px;
+    padding: clamp(25px, 5vw, 40px);
 }
 
 .cta-box h3 {
     font-family: var(--font-heading);
-    font-size: 1.6rem;
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
     color: #fff;
     margin-bottom: 8px;
 }
@@ -537,6 +514,7 @@ body {
     color: var(--text-muted);
 }
 
+/* BUTTONS */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -582,6 +560,7 @@ body {
     object-fit: contain;
 }
 
+/* FOOTER */
 .footer {
     border-top: 1px solid var(--border-gold);
     padding: 30px 0;
@@ -624,16 +603,74 @@ body {
     color: var(--gold-primary);
 }
 
+/* ==========================================
+   MEDIA QUERIES RESPONSIVE ADAPTATION
+   ========================================== */
+
+/* Pantallas medianas (Tablets y Laptops pequeñas) */
 @media (max-width: 992px) {
-    .grid-3, .grid-2 { grid-template-columns: 1fr; }
-    .page-title { font-size: 2.3rem; }
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Tablets en modo vertical y Móviles grandes */
 @media (max-width: 768px) {
     .menu-toggle { display: block; }
-    .nav-links { display: none; }
-    .footer-content { flex-direction: column; gap: 20px; text-align: center; }
-    .footer-left { flex-direction: column; }
+    
+    /* Configuración por defecto para menú móvil oculto (puedes activarlo con JS añadiendo clase .is-active) */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 15, 15, 0.98);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 0;
+        border-bottom: 1px solid var(--border-gold);
+        gap: 20px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+
+    .grid-3, .grid-2 { 
+        grid-template-columns: 1fr; 
+    }
+
+    .footer-content { 
+        flex-direction: column; 
+        gap: 20px; 
+        text-align: center; 
+    }
+    
+    .footer-left { 
+        flex-direction: column; 
+        text-align: center;
+    }
+    
+    .roi-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .container {
+        width: 92%;
+    }
+
+    .service-card-detail, .pricing-card, .cost-table-container, .cta-box {
+        padding: 20px 15px;
+    }
+
+    .page-header {
+        padding-top: 130px;
+    }
 }
 
 
