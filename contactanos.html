@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damand — Contáctanos</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    
+    <link rel="stylesheet" href="css/contactos.css">
+    <link rel="icon" href="img/logo.png">
+</head>
+<body>
+
+    
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <img src="img/logo_completo.png" alt="Logo Damand" class="brand-logo">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="quienes-somos.html" class="nav-link">Quiénes Somos</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="contactanos.html" class="nav-link active btn-nav-cta">Contáctanos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="page-header">
+            <div class="header-bg"></div>
+            <div class="header-overlay"></div>
+            <div class="container text-center">
+                <span class="badge">
+                    <i data-lucide="map-pin"></i> Ubicación y Contacto
+                </span>
+                <h1 class="page-title">¿Dónde estamos y cómo contactarnos?</h1>
+                <p class="page-subtitle">Trabajamos desde Bogotá, Colombia, pero desarrollamos sistemas para cualquier parte del mundo.</p>
+            </div>
+        </section>
+
+        
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2">
+                    
+                    
+                    <div class="contact-info">
+                        <div class="text-start mb-4">
+                            <span class="section-tag">CANALES DE ATENCIÓN</span>
+                            <h2 class="section-title">Hablemos de tu próximo proyecto</h2>
+                            <div class="title-bar"></div>
+                        </div>
+
+                        <div class="info-cards-container">
+                            
+                            
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div>
+                                    <h3>Dirección Física</h3>
+                                    <p>Calle 70 Sur # 13B - 27 Este, Bogotá, Colombia</p>
+                                </div>
+                            </div>
+
+                            
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div>
+                                    <h3>Teléfono</h3>
+                                    <p>+57 314 413 1736</p>
+                                </div>
+                            </div>
+
+                            
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div>
+                                    <h3>Correo Electrónico</h3>
+                                    <p>Damand@gmail.com</p>
+                                </div>
+                            </div>
+
+                            
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i data-lucide="clock"></i>
+                                </div>
+                                <div>
+                                    <h3>Horario de Atención</h3>
+                                    <p>Lunes a Viernes — 8:00 a.m. a 6:00 p.m.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+                        <div class="mt-4">
+                            <a href="https://wa.me/573144131736" target="_blank" class="btn btn-whatsapp">
+                                <i data-lucide="message-circle"></i>
+                                <span>Escríbenos por WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <h3>Envíanos un mensaje directo</h3>
+                            <p class="form-desc">Déjanos tus datos y te responderemos en el menor tiempo posible.</p>
+
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Pérez" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="correo">Correo electrónico</label>
+                                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono / WhatsApp</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje">¿En qué podemos ayudarte?</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente sobre tu negocio o el sistema que necesitas..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span>Enviar mensaje</span>
+                                <i data-lucide="send"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="section section-dark">
+            <div class="container text-center max-width-md">
+                <span class="section-tag">NUESTRAS INSTALACIONES</span>
+                <h2 class="section-title">Nuestra Sede Principal</h2>
+                <div class="title-bar center"></div>
+                <p class="section-subtitle mb-4">El punto de partida donde diseñamos soluciones para el crecimiento tecnológico de tu empresa.</p>
+                
+                <div class="sede-img-wrapper">
+                    <img src="img/colehio2.jpg" alt="Sede Principal Damand" class="sede-img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <img src="img/logo_completo.png" alt="Logo Damand" class="footer-logo">
+                <p>© 2025 Damand — Soluciones tecnológicas para microempresas. Todos los derechos reservados.</p>
+            </div>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="js/index.js"></script>
+</body>
+</html>
