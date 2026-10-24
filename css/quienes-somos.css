@@ -252,8 +252,8 @@ body {
 }
 
 .profile-avatar {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     background: rgba(212, 175, 55, 0.1);
     border: 1px solid var(--gold-primary);
@@ -261,7 +261,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 0 auto;
     overflow: hidden; /* Asegura que la imagen respate el borde circular */
 }
 
