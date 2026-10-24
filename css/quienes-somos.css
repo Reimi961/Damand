@@ -252,25 +252,24 @@ body {
 }
 
 .profile-avatar {
-    width: 250px;
-    height: 250px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     background: rgba(212, 175, 55, 0.1);
-    border: 1px solid var(--gold-primary);
+    border: 2px solid var(--gold-primary);
     color: var(--gold-primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0 auto 25px auto;
-    overflow: hidden; /* Asegura que la imagen respate el borde circular */
+    margin: 0 auto 25px auto; /* Centrado horizontal y separación inferior */
+    overflow: hidden;
 }
 
 .profile-avatar i {
-    width: 32px;
-    height: 32px;
+    width: 45px;
+    height: 45px;
 }
 
-/* Ajuste para la foto del avatar dentro de la tarjeta */
 .profile-avatar img {
     width: 100%;
     height: 100%;
