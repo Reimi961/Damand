@@ -252,8 +252,8 @@ body {
 }
 
 .profile-avatar {
-    width: 70px;
-    height: 70px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: rgba(212, 175, 55, 0.1);
     border: 1px solid var(--gold-primary);
