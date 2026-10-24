@@ -262,11 +262,19 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    overflow: hidden; /* Asegura que la imagen respate el borde circular */
 }
 
 .profile-avatar i {
     width: 32px;
     height: 32px;
+}
+
+/* Ajuste para la foto del avatar dentro de la tarjeta */
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .profile-name {
